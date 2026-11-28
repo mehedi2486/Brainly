@@ -23,7 +23,7 @@ const ContentSchema = new mongoose_1.Schema({
 exports.ContentModel = (0, mongoose_1.model)("Content", ContentSchema);
 const LinkSchema = new mongoose_1.Schema({
     hash: { type: String, require: true },
-    userId: { type: mongoose_2.default.Types.ObjectId, ref: "User", require: true }
+    userId: { type: mongoose_2.default.Types.ObjectId, ref: "User", require: true, unique: true }
 });
 exports.LinkModel = (0, mongoose_1.model)("link", LinkSchema);
 //# sourceMappingURL=db.js.map
